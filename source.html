@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task Manager</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Monaco", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #7f88cb;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7f88cb;
+  padding: 10px 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #7f88cb;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+button {
+  background-color: #7f88cb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #7f88cb;
+}
+
+textarea, input[type=text], input[type=number] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.academic {
+    background-color: #cb897f
+}
+
+.extra {
+    background-color: #cbc07f
+}
+
+.social {
+    background-color: #89cb7f
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="#home">Task Manager</a>
+  <div>
+    <a href="#tasks">Tasks</a>
+    <a href="#assistant">AI Assistant</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header id="home">
+  <h1>Welcome to Your Task Manager</h1>
+</header>
+
+<!-- Task Section -->
+<div class="container" id="tasks">
+  <h2>Organize Your Tasks</h2>
+  <form>
+    <p><input type="text" placeholder="Task Name" required></p>
+    <p><input type="number" placeholder="Duration (minutes)" required></p>
+    <p><button type="submit">Add Task</button></p>
+  </form>
+  <h3>Tasks</h3>
+  <table class="styled-table">
+    <thead>
+        <tr>
+            <th class="academic">Academic</th>
+            <th class="academic">Hours</th>
+            <th class="extra">Extracurricular</th>
+            <th class="extra">Hours</th>
+            <th class="social">Social</th>
+            <th class="social">Hours</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dom</td>
+            <td>6000</td>
+        </tr>
+        <tr class="active-row">
+            <td>Melissa</td>
+            <td>5150</td>
+        </tr>
+        <!-- and so on... -->
+    </tbody>
+    </table>
+  <ul id="task-list"></ul>
+</div>
+
+<!-- AI Assistant Section -->
+<div class="container" id="assistant">
+  <h2>AI Assistant</h2>
+  <p>Ask our AI assistant for help managing tasks and schedules.</p>
+  <textarea rows="5" placeholder="Ask me anything..."></textarea>
+  <p><button type="submit">Ask AI</button></p>
+</div>
+
+<!-- Contact Section -->
+<div class="container" id="contact">
+  <h2>Contact Us</h2>
+  <p>If you have any questions, feel free to reach out.</p>
+  <form>
+    <p><input type="text" placeholder="Name" required></p>
+    <p><input type="text" placeholder="Email" required></p>
+    <p><textarea rows="5" placeholder="Message" required></textarea></p>
+    <p><button type="submit">Send Message</button></p>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer style="text-align: center; padding: 20px; background-color: #cb7fb9; color: white;">
+  <p>&copy; 2025 Task Manager</p>
+</footer>
+
+</body>
+</html>
